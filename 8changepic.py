@@ -9,12 +9,12 @@ img1 = cv2.imread('./resources/Poli.jpg', cv2.IMREAD_UNCHANGED)
 rows, cols = img1.shape[:2]
 
 # 平移
-M = np.float32([[1,0,100],[0,1,50]])
-dst = cv2.warpAffine(img1,M,(cols,rows))
+# M = np.float32([[1,0,100],[0,1,50]])
+# dst = cv2.warpAffine(img1,M,(cols,rows))
 
 # 缩放
 # res=cv2.resize(img1,None,fx=2,fy=2,interpolation=cv2.INTER_CUBIC)
-# res = cv2.resize(img1, (2 * cols, 2 * rows), interpolation=cv2.INTER_CUBIC)
+dst = cv2.resize(img1, (600, 200), interpolation=cv2.INTER_CUBIC)
 
 # 旋转:第一个参数为旋转中心 第二个为旋转角度 第三个为旋转后的缩放因子
 # M = cv2.getRotationMatrix2D((cols/2, rows/2), 45, 0.6)
