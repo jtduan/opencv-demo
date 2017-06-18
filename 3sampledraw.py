@@ -11,8 +11,9 @@ cv2.ellipse(img,(256,256),(100,50),0,0,180,255,-1)
 
 # 画多边形
 pts=np.array([[10,5],[20,30],[70,20],[50,10]], np.int32)
-pts=pts.reshape((-1,1,2))
-cv2.polylines(img,[pts],1,(0,255,255))
+# pts=pts.reshape((-1,1,2))
+# cv2.polylines(img,[pts],1,(0,255,255))
+cv2.fillPoly(img,[pts],(0,255,255))
 
 # 在图片上写字
 font=cv2.FONT_HERSHEY_SIMPLEX
